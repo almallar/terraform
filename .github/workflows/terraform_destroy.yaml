@@ -22,10 +22,11 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v2
+
+    # Initialize Terraform
+    - name: 'Terraform Init'
+      run: terraform init
  
+    # Destroy Terraform resources
     - name: 'Terraform Destroy'
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.14.8
-        tf_actions_subcommand: 'destroy'
-        tf_actions_working_dir: "./terraform"
+      run: terraform destroy -auto-approve
