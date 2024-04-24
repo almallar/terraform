@@ -40,6 +40,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   size                            = "Standard_B1ls"
   admin_username                  = "amallar"
   disable_password_authentication = false # Deshabilitar autenticación por contraseña
+  admin_password                  = "Prueba12341234--"
 
   network_interface_ids = [
     azurerm_network_interface.example.id
