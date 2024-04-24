@@ -59,3 +59,5 @@ variable "admin_password" {
   description = "The admin password for the virtual machine."
   default     = "Prueba12341234-"
 }
+
+
