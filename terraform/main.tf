@@ -65,5 +65,5 @@ resource "azurerm_linux_virtual_machine" "example" {
     version   = "latest"
   }
 
-  computer_name  = "hostname"
+  computer_name = "hostname"
 }
