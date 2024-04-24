@@ -34,11 +34,11 @@ resource "azurerm_network_interface" "example" {
 }
 
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "linux"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  size                = "Standard_B1ls"
-  admin_username      = "amallar"
+  name                            = "linux"
+  location                        = azurerm_resource_group.example.location
+  resource_group_name             = azurerm_resource_group.example.name
+  size                            = "Standard_B1ls"
+  admin_username                  = "amallar"
   disable_password_authentication = true  # Deshabilitar autenticación por contraseña
 
   network_interface_ids = [
